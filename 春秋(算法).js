@@ -33,9 +33,9 @@ while(queue.length > 0) {
 
 // 链表
 /* 链表的插入/删除效率高，但访问效率低，数组的访问效率高，但插入效率低 */
-function ListNode(val) {
-  this.val = val
-  this.next = null
+function ListNode(val=null) {
+  this.val = val;
+  this.next = null;
 }
 const head = new ListNode()
 const node1 = new ListNode(1);
@@ -50,7 +50,7 @@ node1.next = node2
 node3.next = node1.next;
 node1.next = node3;
 
-// 删除链表元素node3；只需要遍历时可以跳过目标元素即可
+// 删除链表元素node3；只需要遍历时可以跳过目标元素即可 (将目标元素的前驱元素的next等于 后驱元素的next)
 node1.next = node3.next
 
 // 遍历链表,访问链表
