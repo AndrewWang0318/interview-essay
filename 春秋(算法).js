@@ -61,8 +61,13 @@ for (let i = 0; i < idx; i++) {
 }
 console.log(target)
 
-// 二叉树
+
 /* 树由根节点 节点 叶节点 组成；从叶节点到根节点的层级为高度,一个节点开叉多少个子树被称为度 */
+
+// 二叉树
+/* 二叉树可以没有根节点作为一颗空树存在；
+  否则，它由根节点和左子树以及右子树连结，且左子树和右子树都是二叉树，是不能调换的
+*/
 function TreeNode(val = null){
   this.val = val;
   this.left = this.right = null;
