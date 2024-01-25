@@ -78,13 +78,13 @@ const temp_tree = {
   val: 'A',
   left:  {
     val: 'B',
-    right:  { val: 'E', right: null, left: null },
-    left:  { val: 'D', right: null, left: null }
+    left:  { val: 'D', right: null, left: null },
+    right:  { val: 'E', right: null, left: null }
   },
   right:  {
     val: 'C',
-    right:  { val: 'F', right: null, left: null },
-    left: null
+    left: null,
+    right:  { val: 'F', right: null, left: null }
   }
 }
 console.log(tree)
