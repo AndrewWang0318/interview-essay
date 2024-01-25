@@ -94,7 +94,7 @@ console.log(tree)
 function preorder(root) {
   // 递归边界，root 为空
   if(!root) {
-      return 
+    return 
   }
   // 输出当前遍历的结点值
   console.log('当前遍历的结点值是：', root.val)  
