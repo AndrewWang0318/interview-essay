@@ -72,5 +72,36 @@ function TreeNode(val = null){
   this.val = val;
   this.left = this.right = null;
 }
-const tree = new TreeNode(1);
+const tree = new TreeNode('A');
+
+const temp_tree = {
+  val: 'A',
+  left:  {
+    val: 'B',
+    right:  { val: 'E', right: null, left: null },
+    left:  { val: 'D', right: null, left: null }
+  },
+  right:  {
+    val: 'C',
+    right:  { val: 'F', right: null, left: null },
+    left: null
+  }
+}
 console.log(tree)
+
+// 中序遍历
+// 所有遍历函数的入参都是树的根结点对象
+function preorder(root) {
+  // 递归边界，root 为空
+  if(!root) {
+      return 
+  }
+  // 输出当前遍历的结点值
+  console.log('当前遍历的结点值是：', root.val)  
+  // 递归遍历左子树 
+  preorder(root.left)  
+  // 递归遍历右子树  
+  preorder(root.right)
+}
+console.log(temp_tree);
+preorder(temp_tree);
